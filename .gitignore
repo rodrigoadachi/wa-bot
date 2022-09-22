@@ -6,4 +6,3 @@ tokens/ws-sender-dev/Crashpad/
 tokens/ws-sender-dev/Crashpad/metadata/
 .env
 yarn-error.log
-yarn.lock
