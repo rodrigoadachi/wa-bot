@@ -1,0 +1,7 @@
+{
+  "whatch": ["src"],
+  "ext": ".ts,.js",
+  "ignore": [],
+  "exec": "yarn ts-node ./src/server.ts"
+}
+
