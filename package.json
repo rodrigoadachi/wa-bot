@@ -6,7 +6,8 @@
   "scripts": {
     "build": "rimraf ./build && tsc",
     "dev": "nodemon src/server.ts",
-    "start": "yarn build && node dist/server.js"
+    "run": "yarn build && node dist/server.js",
+    "start": "pm2 start src/server.ts --watch"
   },
   "dependencies": {
     "axios": "^0.27.2",
