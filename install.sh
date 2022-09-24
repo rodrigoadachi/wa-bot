@@ -51,6 +51,10 @@ pm2 install typescript
 printf "Install ${RED}nodemon${NC}\n"
 yarn global add nodemon
 
+### install ts-node
+printf "Install ${RED}ts-node${NC}\n"
+yarn global add ts-node ts-node-dev
+
 ### install python 3.10.4
 printf "Install ${RED}Python${NC}\n"
 sudo apt install software-properties-common -y
