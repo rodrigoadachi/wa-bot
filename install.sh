@@ -32,7 +32,7 @@ git clone https://github.com/rodrigoadachi/wa-bot.git
 printf "Install ${RED}NodeJs${NC}\n"
 $CURL -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
 source ~/.bashrc
-nvm install v16.17.1
+nvm install v16.17.0
 
 ### install yarn
 printf "Install ${RED}Yarn${NC}\n"
@@ -42,6 +42,12 @@ sudo apt update
 sudo apt install yarn -y
 echo 'export PATH="$PATH:$(yarn global bin)"' >> ~/.bash_profile
 
+### install python 3.10.4
+printf "Install ${RED}Python${NC}\n"
+sudo apt install software-properties-common -y
+sudo add-apt-repository ppa:deadsnakes/ppa -y
+sudo apt update
+sudo apt install python3.10 -y
 
 ### install PM2
 printf "Install ${RED}PM2${NC}\n"
@@ -50,20 +56,22 @@ pm2 startup
 pm2 save
 pm2 install typescript
 
-### install nodemon
-printf "Install ${RED}nodemon${NC}\n"
-yarn global add nodemon
+### install nodemon@2.0.19
+printf "Install ${RED}nodemon@2.0.19${NC}\n"
+yarn global add nodemon@2.0.19
 
-### install ts-node
-printf "Install ${RED}ts-node${NC}\n"
-yarn global add ts-node ts-node-dev
+### install ts-node@10.9.1
+printf "Install ${RED}ts-node@10.9.1${NC}\n"
+yarn global add ts-node@10.9.1
 
-### install python 3.10.4
-printf "Install ${RED}Python${NC}\n"
-sudo apt install software-properties-common -y
-sudo add-apt-repository ppa:deadsnakes/ppa -y
-sudo apt update
-sudo apt install python3.10 -y
+### install ts-node-dev@2.0.0
+printf "Install ${RED}ts-node-dev@2.0.0${NC}\n"
+yarn global add ts-node-dev@2.0.0
+
+### install typescript@4.7.4
+printf "Install ${RED}typescript@4.7.4${NC}\n"
+yarn global add typescript@4.7.4
+
 
 ### update PATH
 printf "Update ${RED}PATH${NC}\n"
