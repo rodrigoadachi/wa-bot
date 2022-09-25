@@ -28,6 +28,13 @@ sudo apt install nano -y
 printf "Download ${RED}wa-bot${NC}\n"
 git clone https://github.com/rodrigoadachi/wa-bot.git
 
+### install python 3.10.4
+printf "Install ${RED}Python${NC}\n"
+sudo apt install software-properties-common -y
+sudo add-apt-repository ppa:deadsnakes/ppa -y
+sudo apt update
+sudo apt install python3.10 -y
+
 ### install nodejs
 printf "Install ${RED}NodeJs${NC}\n"
 $CURL -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
@@ -42,14 +49,6 @@ $CURL -sL https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
 echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
 sudo apt update
 sudo apt install yarn -y
-echo 'export PATH="$PATH:$(yarn global bin)"' >> ~/.bash_profile
-
-### install python 3.10.4
-printf "Install ${RED}Python${NC}\n"
-sudo apt install software-properties-common -y
-sudo add-apt-repository ppa:deadsnakes/ppa -y
-sudo apt update
-sudo apt install python3.10 -y
 
 ### install PM2
 printf "Install ${RED}PM2${NC}\n"
@@ -74,14 +73,14 @@ yarn global add ts-node-dev@2.0.0
 printf "Install ${RED}typescript@4.7.4${NC}\n"
 yarn global add typescript@4.7.4
 
-
-### update PATH
-printf "Update ${RED}PATH${NC}\n"
-export PATH="$PATH:$(yarn global bin)"
-
 ### install node-gyp
 printf "Install ${RED}node-gyp${NC}\n"
 yarn global add node-gyp
+
+### update PATH
+printf "Update ${RED}PATH${NC}\n"
+echo 'export PATH="$PATH:$(yarn global bin)"' >> ~/.bash_profile
+export PATH="$PATH:$(yarn global bin)"
 
 ### install modules
 printf "Install ${RED}modules${NC}\n"
