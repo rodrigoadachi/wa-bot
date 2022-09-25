@@ -33,6 +33,8 @@ printf "Install ${RED}NodeJs${NC}\n"
 $CURL -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
 source ~/.bashrc
 nvm install v16.17.0
+nvm use 16.17.0
+nvm alias default 16.17.0
 
 ### install yarn
 printf "Install ${RED}Yarn${NC}\n"
